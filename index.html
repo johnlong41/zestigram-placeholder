@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>zestigram</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  ::selection { background: #0f0; color: #0a0a0a; }
+
+  body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #0a0a0a;
+    color: #888;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.008) 2px,
+      rgba(255,255,255,0.008) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 520px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 60px;
+    animation: fadeIn 2s ease;
+  }
+
+  .status {
+    font-size: 11px;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+    line-height: 2;
+    animation: fadeIn 3s ease;
+  }
+
+  .status span {
+    color: #444;
+  }
+
+  .main-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    line-height: 2;
+    margin-bottom: 48px;
+    animation: fadeIn 2.5s ease;
+  }
+
+  .main-text em {
+    font-style: normal;
+    color: #999;
+  }
+
+  .blink {
+    animation: blink 1.2s step-end infinite;
+  }
+
+  .links {
+    margin-top: 20px;
+    animation: fadeIn 3.5s ease;
+  }
+
+  .links a {
+    display: block;
+    padding: 16px 0;
+    border-top: 1px solid #1a1a1a;
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.2s, padding-left 0.2s;
+  }
+
+  .links a:last-child {
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .links a:hover {
+    color: #0f0;
+    padding-left: 12px;
+  }
+
+  .links .arrow {
+    float: right;
+    color: #2a2a2a;
+    transition: color 0.2s;
+  }
+
+  .links a:hover .arrow {
+    color: #0f0;
+  }
+
+  .footer {
+    margin-top: 80px;
+    font-size: 10px;
+    color: #1e1e1e;
+    line-height: 2;
+    animation: fadeIn 4s ease;
+  }
+
+  .pulse {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #0a3d0a;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 3s ease-in-out infinite;
+    vertical-align: middle;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { background: #0a3d0a; }
+    50% { background: #0f0; box-shadow: 0 0 8px rgba(0,255,0,0.3); }
+  }
+
+  @media (max-width: 480px) {
+    .logo { letter-spacing: 5px; font-size: 12px; }
+    .main-text { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="logo">zestigram</div>
+
+  <div class="status">
+    <span>status:</span> building<br>
+    <span>location:</span> south of boston<br>
+    <span>signal:</span> <span class="pulse"></span>active
+  </div>
+
+  <div class="main-text">
+    This is an intersection. <em>Not a destination.</em><br><br>
+    Systems. Pattern recognition. Automation.<br>
+    Real estate. Operational design. Things<br>
+    that work with fewer moving parts.<br><br>
+    More here soon<span class="blink">_</span>
+  </div>
+
+  <div class="links">
+    <a href="https://johnlong.realestate">
+      Real estate
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a href="https://2042main.com">
+      Westport Point rental
+      <span class="arrow">&rarr;</span>
+    </a>
+    <a href="mailto:johnlong41@zestigram.com">
+      johnlong41@zestigram.com
+      <span class="arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    &copy; 2026<br>
+    built by hand
+  </div>
+</div>
+
+</body>
+</html>
