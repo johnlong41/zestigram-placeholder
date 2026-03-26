@@ -25,6 +25,15 @@
     position: relative;
   }
 
+  .ghost-image {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('ghost.jpg') center center / cover no-repeat;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+  }
+
   body::before {
     content: '';
     position: fixed;
@@ -163,6 +172,8 @@
 </style>
 </head>
 <body>
+
+<div class="ghost-image"></div>
 
 <div class="container">
   <div class="logo">zestigram</div>
