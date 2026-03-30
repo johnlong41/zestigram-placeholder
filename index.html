@@ -197,9 +197,87 @@
     50% { background: #1D9E75; box-shadow: 0 0 8px rgba(29,158,117,0.3); }
   }
 
+  .about {
+    margin-top: 56px;
+    padding: 28px 32px;
+    border-top: 1px solid rgba(38,59,92,0.08);
+    animation: fadeIn 4s ease;
+  }
+
+  .about-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C5A572;
+    margin-bottom: 20px;
+  }
+
+  .about-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .about-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(38,59,92,0.06);
+  }
+
+  .about-info {
+    min-width: 0;
+  }
+
+  .about-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #263B5C;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+
+  .about-title {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7A8292;
+    margin-top: 2px;
+  }
+
+  .about-tagline {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C5A572;
+    margin-top: 12px;
+  }
+
+  .about-bio {
+    font-size: 12px;
+    color: #5D6670;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+
+  .about-location {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-top: 8px;
+  }
+
   @media (max-width: 480px) {
     .logo { letter-spacing: 5px; font-size: 12px; }
     .main-text { font-size: 14px; }
+    .about { padding: 28px 20px; }
+    .about-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 </style>
 </head>
@@ -243,6 +321,20 @@
     <div class="also-label">Also from Zestigram</div>
     <div class="also-text">
       <a href="https://billedsavings.com" target="_blank" rel="noopener noreferrer">BilledSavings.com</a> &mdash; a free tool that helps families find where their money is going. Most households discover $200&ndash;500/month in savings they didn&rsquo;t know they had.
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="about-label">About</div>
+    <div class="about-card">
+      <img src="john-long-headshot-bw.jpg" alt="John Long" class="about-photo">
+      <div class="about-info">
+        <div class="about-name">John Long</div>
+        <div class="about-title">CEO, Zestigram</div>
+        <div class="about-tagline">Zestigram &mdash; Real Estate &amp; Technology</div>
+        <div class="about-bio">Entrepreneur. Builds applications and businesses that drive revenue.</div>
+        <div class="about-location">South of Boston.</div>
+      </div>
     </div>
   </div>
 
