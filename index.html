@@ -9,12 +9,12 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  ::selection { background: #0f0; color: #0a0a0a; }
+  ::selection { background: #C5A572; color: #fff; }
 
   body {
     font-family: 'JetBrains Mono', monospace;
-    background: #0a0a0a;
-    color: #888;
+    background: #FAF8F4;
+    color: #5D6670;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: url('ghost.jpg') center center / cover no-repeat;
-    opacity: 0.035;
+    opacity: 0.03;
     pointer-events: none;
     z-index: 0;
   }
@@ -42,8 +42,8 @@
       0deg,
       transparent,
       transparent 2px,
-      rgba(255,255,255,0.008) 2px,
-      rgba(255,255,255,0.008) 4px
+      rgba(38,59,92,0.008) 2px,
+      rgba(38,59,92,0.008) 4px
     );
     pointer-events: none;
     z-index: 1;
@@ -61,27 +61,27 @@
     font-weight: 300;
     letter-spacing: 8px;
     text-transform: uppercase;
-    color: #333;
+    color: #263B5C;
     margin-bottom: 60px;
     animation: fadeIn 2s ease;
   }
 
   .status {
     font-size: 11px;
-    color: #2a2a2a;
+    color: #7A8292;
     margin-bottom: 40px;
     line-height: 2;
     animation: fadeIn 3s ease;
   }
 
   .status span {
-    color: #444;
+    color: #263B5C;
   }
 
   .main-text {
     font-size: 16px;
     font-weight: 400;
-    color: #666;
+    color: #5D6670;
     line-height: 2;
     margin-bottom: 48px;
     animation: fadeIn 2.5s ease;
@@ -89,7 +89,7 @@
 
   .main-text em {
     font-style: normal;
-    color: #999;
+    color: #263B5C;
   }
 
   .blink {
@@ -104,8 +104,8 @@
   .links a {
     display: block;
     padding: 16px 0;
-    border-top: 1px solid #1a1a1a;
-    color: #555;
+    border-top: 1px solid rgba(38,59,92,0.08);
+    color: #5D6670;
     text-decoration: none;
     font-size: 13px;
     font-weight: 400;
@@ -113,28 +113,60 @@
   }
 
   .links a:last-child {
-    border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid rgba(38,59,92,0.08);
   }
 
   .links a:hover {
-    color: #0f0;
+    color: #C5A572;
     padding-left: 12px;
   }
 
   .links .arrow {
     float: right;
-    color: #2a2a2a;
+    color: #9CA3AF;
     transition: color 0.2s;
   }
 
   .links a:hover .arrow {
-    color: #0f0;
+    color: #C5A572;
+  }
+
+  .also {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(38,59,92,0.08);
+    animation: fadeIn 3.8s ease;
+  }
+
+  .also-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #C5A572;
+    margin-bottom: 12px;
+  }
+
+  .also-text {
+    font-size: 13px;
+    color: #7A8292;
+    line-height: 1.9;
+  }
+
+  .also-text a {
+    color: #263B5C;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .also-text a:hover {
+    color: #C5A572;
   }
 
   .footer {
-    margin-top: 80px;
+    margin-top: 56px;
     font-size: 10px;
-    color: #1e1e1e;
+    color: #9CA3AF;
     line-height: 2;
     animation: fadeIn 4s ease;
   }
@@ -143,7 +175,7 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    background: #0a3d0a;
+    background: rgba(29,158,117,0.3);
     border-radius: 50%;
     margin-right: 8px;
     animation: pulse 3s ease-in-out infinite;
@@ -161,8 +193,8 @@
   }
 
   @keyframes pulse {
-    0%, 100% { background: #0a3d0a; }
-    50% { background: #0f0; box-shadow: 0 0 8px rgba(0,255,0,0.3); }
+    0%, 100% { background: rgba(29,158,117,0.3); }
+    50% { background: #1D9E75; box-shadow: 0 0 8px rgba(29,158,117,0.3); }
   }
 
   @media (max-width: 480px) {
@@ -205,6 +237,13 @@
       johnlong41@zestigram.com
       <span class="arrow">&rarr;</span>
     </a>
+  </div>
+
+  <div class="also">
+    <div class="also-label">Also from Zestigram</div>
+    <div class="also-text">
+      <a href="https://billedsavings.com" target="_blank" rel="noopener noreferrer">BilledSavings.com</a> &mdash; a free tool that helps families find where their money is going. Most households discover $200&ndash;500/month in savings they didn&rsquo;t know they had.
+    </div>
   </div>
 
   <div class="footer">
